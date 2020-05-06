@@ -110,7 +110,7 @@ the application must be hosted on Heroku.
 Shelters are organizations that have pets available for adoption.
 
 ```
-[ ] done
+[x] done
 
 User Story 2, Shelter Index
 
@@ -120,7 +120,7 @@ Then I see the name of each shelter in the system
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 3, Shelter Show
 
