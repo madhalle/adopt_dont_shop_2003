@@ -1,0 +1,12 @@
+<h1>Update Shelter Information</h1>
+
+<%= form_tag "/shelters/#{@shelter.id}", method: :patch do %>
+  <%= text_field_tag :name , "#{@shelter.name}"%>
+  <%= text_field_tag :address, "#{@shelter.address}" %>
+  <%= text_field_tag :city, "#{@shelter.city}" %>
+  <%= text_field_tag :state, "#{@shelter.state}" %>
+  <%= text_field_tag :zip, "#{@shelter.zip}" %>
+
+  <%= button_to "Submit", "/shelters/#{@shelter.id}" %>
+
+<% end %>

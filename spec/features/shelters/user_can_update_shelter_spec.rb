@@ -7,9 +7,8 @@ RSpec.describe "shelter show page" do
     shelter_2 = Shelter.create(name: "Some of the Pets", address: "16 Random Rd", city: "Denver", state: "CO", zip: 80113)
 
     visit "/shelters/#{shelter_1.id}"
-
     click_link "Update Shelter"
-    expect(current_path).to eq("/shelters/:id/edit")
+    expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
     fill_in :name, with: "No Longer All the Pets"
     # fill_in :address, with:
     # fill_in :city, with:
@@ -17,7 +16,7 @@ RSpec.describe "shelter show page" do
     # fill_in :zip, with:
     click_button "Submit"
     expect(current_path).to eq("/shelters/#{shelter_1.id}")
-
+  end
 end
 
 
