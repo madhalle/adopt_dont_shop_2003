@@ -1,7 +1,6 @@
 <h1>Create New Pet</h1>
 <%= form_tag "/shelters/#{@shelter.id}/pets" do %>
   <%= text_field_tag :name , "Name"%>
-  <%= text_field_tag :address, "Address" %>
   <%= text_field_tag :description, "Description" %>
   <%= text_field_tag :sex, "Sex" %>
   <%= text_field_tag :age, "Age" %>
