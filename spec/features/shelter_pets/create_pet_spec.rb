@@ -6,7 +6,7 @@ RSpec.describe "shelter pet creation, shelter pet new, shelter pet index" do
                                 city: "Denver",
                                 state: "CO",
                                 zip: 80113)
-    visit "#{shelter_1.id}/pets"
+    visit "/shelters/#{shelter_1.id}/pets"
     click_on "Create Pet"
     expect(current_path).to eq("/shelters/#{shelter_1.id}/pets/new")
 
@@ -30,7 +30,7 @@ RSpec.describe "shelter pet creation, shelter pet new, shelter pet index" do
     expect(new_pet.adoption_status).to eq("adoptable")
 
   end
-end 
+end
 
 
 

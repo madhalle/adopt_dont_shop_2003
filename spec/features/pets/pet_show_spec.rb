@@ -17,7 +17,6 @@ RSpec.describe "pet show page" do
                         adoption_status: "adoptable")
 
     visit "/pets/#{pet1.id}"
-    save_and_open_page
     expect(page).to have_content(pet1.name)
     expect(page).to have_content(pet1.age)
     expect(page).to have_content(pet1.sex)
