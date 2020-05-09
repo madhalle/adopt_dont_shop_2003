@@ -7,7 +7,7 @@ RSpec.describe "pet show page" do
                                 city: "Denver",
                                 state: "CO",
                                 zip: 80113)
-                                
+
     pet1 = shelter_1.pets.create!( image: "https://i.redd.it/ilfdwwjo9zs11.png",
                         name: "Gerald",
                         age: 62,
@@ -16,7 +16,7 @@ RSpec.describe "pet show page" do
                         description: "Loves long walks on the beach",
                         adoption_status: "adoptable")
 
-    visit '/pets/#{pet1.id}'
+    visit "/shelters/#{pet1.id}"
     expect(page).to have_content(pet1.name)
     expect(page).to have_content(pet1.age)
     expect(page).to have_content(pet1.sex)
