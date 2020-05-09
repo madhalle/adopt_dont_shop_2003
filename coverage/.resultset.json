@@ -189,10 +189,40 @@
         1,
         1,
         null,
+        1,
         null
       ],
       "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/app/helpers/application_helper.rb": [
         1,
+        null
+      ],
+      "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/spec/features/shelters/user_can_create_new_shelter_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/spec/features/shelters/user_can_delete_shelter_spec.rb": [
@@ -283,6 +313,41 @@
         null,
         null
       ],
+      "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/app/models/shelter.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/app/models/pet.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/app/controllers/pets_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
       "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/app/controllers/shelters_controller.rb": [
         1,
         1,
@@ -322,28 +387,8 @@
         null,
         null,
         null
-      ],
-      "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/app/controllers/application_controller.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/app/models/shelter.rb": [
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/turing/Desktop/Turing/Mod2/projects/adopt_dont_shop_2003/app/models/application_record.rb": [
-        1,
-        1,
-        null
       ]
     },
-    "timestamp": 1588958992
+    "timestamp": 1588982920
   }
 }

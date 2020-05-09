@@ -1,0 +1,6 @@
+<h1> All the Pets in the World (Shelters)</h1>
+
+<% @pets.each do |pet| %>
+<h2><%= pet.name %></h2>
+  <%= image_tag(pet.image :height =>50% :width =>50%) %>
+<% end %>
