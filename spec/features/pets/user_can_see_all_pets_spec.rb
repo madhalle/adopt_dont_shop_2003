@@ -25,15 +25,14 @@ RSpec.describe "pet index page" do
                           shelter_id: shelter_2.id)
 
       visit "/pets"
-      save_and_open_page
+
       expect(page).to have_content(pet1.name)
-      expect(page).to have_css("image#pet-image-#{pet1.id}")
-      # expect(page).to have_css("#pet-image-#{pet1.id}")
+      expect(page).to have_css("img[src*='#{pet1.image}']")
       expect(page).to have_content(pet1.age)
       expect(page).to have_content(pet1.sex)
       expect(page).to have_content("#{pet1.shelter_id}")
 
-      expect(page).to have_css("#pet-image-#{pet2.id}")
+      expect(page).to have_css("img[src*='#{pet2.image}']")
       expect(page).to have_content(pet2.name)
       expect(page).to have_content(pet2.age)
       expect(page).to have_content(pet2.sex)
