@@ -10,7 +10,7 @@ RSpec.describe "shelter show page" do
     visit "/shelters/#{shelter_1.id}"
 
     click_link "Delete Shelter"
-    
+
     expect(current_path).to eq("/shelters")
     expect(page).to have_content(shelter_2.name)
     expect(page).to_not have_content(shelter_1.name)
