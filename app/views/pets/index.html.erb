@@ -2,5 +2,9 @@
 
 <% @pets.each do |pet| %>
 <h2><%= pet.name %></h2>
-  <%= image_tag(pet.image :height =>50% :width =>50%) %>
+  <%= image_tag(pet.image) %>
+  <p><%= pet.age %></p>
+  <p><%= pet.sex %></p>
+  <p><%= pet.shelter_id %></p>
+
 <% end %>
