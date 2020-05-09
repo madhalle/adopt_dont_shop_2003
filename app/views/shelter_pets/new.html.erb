@@ -1,0 +1,11 @@
+<h1>Create New Pet</h1>
+<%= form_tag "/shelters/#{@shelter.id}/pets" do %>
+  <%= text_field_tag :name , "Name"%>
+  <%= text_field_tag :description, "Description" %>
+  <%= text_field_tag :sex, "Sex" %>
+  <%= text_field_tag :age, "Age" %>
+  <%= text_field_tag :image, "Image Link" %>
+  <%= hidden_field_tag :shelter_id, "#{@shelter.id}" %>
+  <%= hidden_field_tag :adoption_status, "adoptable" %>
+  <%= submit_tag "Create Pet", method: :post %>
+<% end %>
