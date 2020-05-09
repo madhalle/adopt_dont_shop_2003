@@ -22,28 +22,17 @@ RSpec.describe "shelter pets index page" do
 
     visit "/shelters/#{shelter_2.id}/pets"
 
+    expect(page).to have_content(shelter_2.name)
     expect(page).to have_content(pet1.name)
     expect(page).to have_content(pet1.age)
     expect(page).to have_content(pet1.sex)
-    expect(page).to have_css("image#pet-image-#{pet1.id}")
+    expect(page).to have_css("img[src*='#{pet1.image}']")
+
 
     expect(page).to have_content(pet2.name)
     expect(page).to have_content(pet2.age)
     expect(page).to have_content(pet2.sex)
-    expect(page).to have_css("image#pet-image-#{pet2.id}")
-  end 
-end
+    expect(page).to have_css("img[src*='#{pet2.image}']")
 
-# ```
-# [ ] done
-#
-# User Story 8, Shelter Pets Index
-#
-# As a visitor
-# When I visit '/shelters/:shelter_id/pets'
-# Then I see each Pet that can be adopted from that Shelter with that shelter_id including the Pet's:
-# - image
-# - name
-# - approximate age
-# - sex
-# ```
+  end
+end
