@@ -1,10 +1,10 @@
 <h1> All the Pets in the World (Shelters)</h1>
 
 <% @pets.each do |pet| %>
-<h2><%= pet.name %></h2>
-  <%= image_tag(pet.image) %>
-  <p><%= pet.age %></p>
-  <p><%= pet.sex %></p>
-  <p><%= pet.shelter_id %></p>
+<h2>Name: <%= pet.name %></h2>
+  <%= image_tag(pet.image, height:"400") %>
+  <p>Age: <%= pet.age %></p>
+  <p>Sex: <%= pet.sex %></p>
+  <p>Shelter ID: <%= pet.shelter_id %></p>
 
 <% end %>
