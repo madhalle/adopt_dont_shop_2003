@@ -90,7 +90,7 @@ RSpec.describe "pet index page" do
     expect(page).to have_content(pet2.name)
   end
 
-  it "can acced pet show page from index" do
+  it "can access pet show page from index" do
     shelter_1 = Shelter.create(name: "All the Pets",
                                 address: "17 Random Rd",
                                 city: "Denver",
@@ -107,6 +107,13 @@ RSpec.describe "pet index page" do
     visit "/pets"
     click_link "#{pet1.name}"
     expect(current_path).to eq("/pets/#{pet1.id}")
+  end
+  it "can get to shelter index" do
+
+    visit "/pets"
+
+    click_link "Shelter Index"
+    expect(current_path).to eq("/shelters")
   end
 end
 

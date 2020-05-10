@@ -43,6 +43,25 @@ RSpec.describe "pet show page" do
     click_link "Pet Index"
     expect(current_path).to eq("/pets")
   end
+  it "can get to shelter index" do
+    shelter_1 = Shelter.create(name: "All the Pets",
+                                address: "17 Random Rd",
+                                city: "Denver",
+                                state: "CO",
+                                zip: 80113)
+
+    pet1 = shelter_1.pets.create!( image: "https://i.redd.it/ilfdwwjo9zs11.png",
+                        name: "Gerald",
+                        age: 62,
+                        sex: "Male",
+                        shelter_id: shelter_1.id,
+                        description: "Loves long walks on the beach",
+                        adoption_status: "adoptable")
+
+    visit "/pets/#{pet1.id}"
+    click_link "Shelter Index"
+    expect(current_path).to eq("/shelters")
+  end
 
 end
 
