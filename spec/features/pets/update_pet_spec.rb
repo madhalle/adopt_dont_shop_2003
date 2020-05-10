@@ -40,7 +40,7 @@ RSpec.describe "when visiting pet show page" do
     click_link "Pet Index"
     expect(current_path).to eq("/pets")
   end
-  it "can get to pet index" do
+  it "can get to shelter index" do
     shelter_1 = Shelter.create(name: "All the Pets",
                                 address: "17 Random Rd",
                                 city: "Denver",
