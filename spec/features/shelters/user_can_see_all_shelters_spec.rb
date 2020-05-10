@@ -38,4 +38,12 @@ RSpec.describe "shelters index page", type: :feature do
     expect(page).to have_content(shelter_2.name)
 
   end
+
+  it "can get to pet index" do
+  
+    visit "/shelters"
+
+    click_link "Pet Index"
+    expect(current_path).to eq("/pets")
+  end
 end
