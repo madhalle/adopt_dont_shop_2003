@@ -15,9 +15,7 @@
   <p>Description: </p>
   <%= text_field_tag :description, "#{@pet.description}" %>
   <br>
-  <p>Adoption Status: </p>
-  <%= text_field_tag :adoption_status, "#{@pet.adoption_status}" %>
-  <br>
+
 <% end %>
   <br>
 <%= button_to "Submit", "/pets/#{@pet.id}" , method: "post"%>
