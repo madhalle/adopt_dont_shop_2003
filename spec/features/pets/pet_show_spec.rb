@@ -24,6 +24,8 @@ RSpec.describe "pet show page" do
     expect(page).to have_content(pet1.adoption_status)
     expect(page).to have_css("img[src*='#{pet1.image}']")
   end
+
+
 end
 
 
