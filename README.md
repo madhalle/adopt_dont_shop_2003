@@ -341,7 +341,7 @@ When I click the link
 I should be taken to that pets edit page where I can update its information just like in User Story 11
 ```
 ```
-[ ] done
+[x] done
 
 User Story 16, Pet Delete From Pets Index Page
 
@@ -353,7 +353,7 @@ I should be taken to the pets index page where I no longer see that pet
 ```
 
 ```
-[ ] done
+[x] done
 
 User Story 17, Shelter Links
 
