@@ -24,4 +24,12 @@ RSpec.describe "shelter new page", type: :feature do
     expect(new_shelter.zip).to eq(80113)
   end
 
+  it "can get to pet index from new page" do
+
+    visit "/shelters/new"
+
+    click_link "Pet Index"
+    expect(current_path).to eq("/pets")
+  end
+
 end

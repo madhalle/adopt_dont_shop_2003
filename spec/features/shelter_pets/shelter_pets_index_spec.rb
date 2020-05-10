@@ -35,4 +35,18 @@ RSpec.describe "shelter pets index page" do
     expect(page).to have_css("img[src*='#{pet2.image}']")
 
   end
+
+  it "can get to pet index" do
+    shelter_2 = Shelter.create(name: "Some of the Pets",
+                                address: "16 Random Rd",
+                                city: "Denver",
+                                state: "CO",
+                                zip: 80113)
+
+
+    visit "/shelters/#{shelter_2.id}/pets"
+
+    click_link "Pet Index"
+    expect(current_path).to eq("/pets")
+  end
 end
