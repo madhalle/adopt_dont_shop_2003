@@ -7,5 +7,5 @@
   <%= text_field_tag :state, "#{@shelter.state}" %>
   <%= text_field_tag :zip, "#{@shelter.zip}" %>
 
+  <%= submit_tag "Submit"%>
 <% end %>
-  <%= button_to "Submit", "/shelters/#{@shelter.id}", method: :post %>
