@@ -7,32 +7,24 @@ RSpec.describe "when visiting pet show page" do
                                 state: "CO",
                                 zip: 80113)
 
-    pet1 = shelter_1.pets.create!( image: "https://i.redd.it/ilfdwwjo9zs11.png",
+    pet1 = shelter_1.pets.create( image: "https://i.redd.it/ilfdwwjo9zs11.png",
                         name: "Gerald",
                         age: 62,
                         sex: "Male",
                         shelter_id: shelter_1.id)
     visit "/pets/#{pet1.id}"
-
     click_link "Update Pet"
     expect(current_path).to eq("/pets/#{pet1.id}/edit")
 
-    fill_in :adoption_status, with:"pending"
 
-    click_button "Update Pet"
+    fill_in :name, with: "Gerald the 2nd"
+
+    click_button "Submit"
     expect(current_path).to eq("/pets/#{pet1.id}")
-    expect(page).to have_content("pending")
     expect(page).to have_content(pet1.name)
   end
 end
 
-
-
-# ```
-# [ ] done
-#
-# User Story 11, Pet Update
-#
 # As a visitor
 # When I visit a Pet Show page
 # Then I see a link to update that Pet "Update Pet"
