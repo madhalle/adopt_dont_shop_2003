@@ -16,8 +16,8 @@ RSpec.describe "shelters index page", type: :feature do
     shelter_2 = Shelter.create(name: "Some of the Pets", address: "16 Random Rd", city: "Denver", state: "CO", zip: 80113)
 
     visit "/shelters"
-    click_link "Edit Shelter"
-    expect(current_path).to eq("/shelters/#{shelter_1}/edit")
+    click_link "Edit #{shelter_1.name}"
+    expect(current_path).to eq("/shelters/#{shelter_1.id}/edit")
 
     fill_in :name, with:"Allll the pets"
     click_button "Submit"
