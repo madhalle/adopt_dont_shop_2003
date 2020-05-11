@@ -8,6 +8,8 @@
   <p>Age: <%= pet.age %></p>
   <p>Sex: <%= pet.sex %></p>
   <p>Shelter ID: <%= pet.shelter_id %></p>
+  <p>Description: <%=pet.description %></p>
+  <p>Adoption Status: <%= pet.adoption_status %> </p>
 <% end%>
 
 <%=link_to "Create Pet", "/shelters/#{@shelter.id}/pets/new", method: "get"%>
