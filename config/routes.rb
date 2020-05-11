@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root to: 'pages#home'
+  root to: "shelters#index"
   get "/pets", to: "pets#index"
   delete "/pets/:id", to: "pets#destroy"
   get "/pets/:id", to: "pets#show"
